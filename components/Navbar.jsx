@@ -16,9 +16,9 @@ import { FiKey } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <Flex p="2" borderBottom="1px" borderColor="gray.100">
-      <Box fontSize="3xl" color="blue.400" fontWeight="bold">
-        <Link href={"/"} paddingLeft="2">
+    <Flex className="px-2 py-3 border border-gray-100 border-solid">
+      <Box className="text-3xl to-blue-400 font-bold">
+        <Link href={"/"} className="p-2 text-blue-400">
           Realtor
         </Link>
       </Box>
@@ -31,19 +31,40 @@ const Navbar = () => {
             icon={<FcMenu />}
             variant="outline"
             color="red.400"
+            className="outline hover:bg-gray-100 w-[38px] h-[38px] rounded-md border border-solid border-gray-200"
           />
-          <MenuList>
+          <MenuList className="border border-solid border-gray-200 py-2 rounded-md w-56">
             <Link href={"/"} passHref>
-              <MenuItem icon={<FcHome />}>Home</MenuItem>
+              <MenuItem
+                className="py-2 px-3 hover:bg-gray-100"
+                icon={<FcHome />}
+              >
+                Home
+              </MenuItem>
             </Link>
             <Link href={"/search"} passHref>
-              <MenuItem icon={<BsSearch />}>Search</MenuItem>
+              <MenuItem
+                className="py-2 px-3 hover:bg-gray-100"
+                icon={<BsSearch />}
+              >
+                Search
+              </MenuItem>
             </Link>
             <Link href={"/search?purpose=for-sale"} passHref>
-              <MenuItem icon={<FcAbout />}>Buy Property</MenuItem>
+              <MenuItem
+                className="py-2 px-3 hover:bg-gray-100"
+                icon={<FcAbout />}
+              >
+                Buy Property
+              </MenuItem>
             </Link>
             <Link href={"/search?purpose=for-rent"} passHref>
-              <MenuItem icon={<FiKey />}>Rent Property</MenuItem>
+              <MenuItem
+                className="py-2 px-3 hover:bg-gray-100"
+                icon={<FiKey />}
+              >
+                Rent Property
+              </MenuItem>
             </Link>
           </MenuList>
         </Menu>

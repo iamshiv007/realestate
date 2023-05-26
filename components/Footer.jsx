@@ -4,11 +4,8 @@ import React from "react";
 const Footer = () => {
   return (
     <Box
-      textAlign="center"
-      p="5"
-      color="gray.600"
-      borderTop="1px"
-      borderColor="gray.100"
+     
+      className="text-center text-gray-600 p-3 border-solid border-top border-gray-100"
     >
       © 2023 Realtor, Inc.
     </Box>
